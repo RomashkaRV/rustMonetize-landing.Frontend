@@ -1,0 +1,60 @@
+@use "style/mixins/typography";
+
+.layer {
+  padding: 200px 0;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    max-width: 640px;
+
+    @include typography.h1;
+
+    text-align: center;
+
+    color: var(--base-black);
+  }
+
+  .shadow {
+    position: absolute;
+    top: 150px;
+  }
+
+  .shop {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    transform: rotate(12deg);
+  }
+
+  .gift {
+    max-width: 150px;
+    height: 150px;
+
+    position: absolute;
+    top: 60px;
+    right: 30%;
+
+    transform: rotate(-12deg);
+  }
+
+  .game {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+
+    transform: rotate(-12deg);
+  }
+
+  .stroke {
+    position: absolute;
+    bottom: 120px;
+
+    transform: rotate(210deg);
+  }
+}

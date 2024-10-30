@@ -3,9 +3,14 @@
 .header {
   padding-top: 25px;
 
+  position: sticky;
+  top: 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  background-color: var(--zinc-100);
 
   &__navbar {
     display: flex;

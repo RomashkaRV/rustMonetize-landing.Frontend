@@ -15,15 +15,15 @@ export const Header = () => {
       url: "/"
     },
     {
+      title: "Примеры",
+      url: "/"
+    },
+    {
       title: "Вопросы",
       url: "/"
     },
     {
       title: "Отзывы",
-      url: "/"
-    },
-    {
-      title: "Примеры работ",
       url: "/"
     }
   ];

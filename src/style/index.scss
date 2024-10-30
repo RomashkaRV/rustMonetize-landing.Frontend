@@ -16,9 +16,11 @@ body {
 
   font-family: Golos, sans-serif;
 
-  overflow-x: hidden;
-
   background-color: var(--zinc-100);
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
