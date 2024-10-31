@@ -1,0 +1,15 @@
+@use "style/mixins/typography";
+
+.layer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  .content {
+    border-radius: 20px;
+
+    opacity: 0.7;
+
+    background-color: var(--base-white);
+  }
+}

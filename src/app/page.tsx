@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header, MainLayer } from "components/common";
+import { Header, MainLayer, TaskLayer } from "components/common";
 
 export default function MainPage() {
   return (
@@ -9,7 +9,7 @@ export default function MainPage() {
 
       <MainLayer />
 
-      <div>lox</div>
+      <TaskLayer />
     </div>
   );
 }
