@@ -12,4 +12,14 @@
 
     background-color: var(--base-white);
   }
+
+  &__head {
+    .title {
+      width: fit-content;
+
+      & p {
+        width: fit-content;
+      }
+    }
+  }
 }
