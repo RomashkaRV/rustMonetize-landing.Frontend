@@ -1,25 +1,71 @@
 @use "style/mixins/typography";
 
 .layer {
+  height: 100%;
+
+  padding-top: 100px;
+
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 60px;
 
   .content {
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
     border-radius: 20px;
 
-    opacity: 0.7;
-
     background-color: var(--base-white);
-  }
 
-  &__head {
-    .title {
-      width: fit-content;
+    &__head {
+      display: flex;
+      gap: 20px;
 
-      & p {
-        width: fit-content;
+      .title {
+        width: 70%;
+
+        & p {
+          @include typography.h2;
+
+          width: 100%;
+
+          color: var(--base-black);
+
+          &:nth-child(2) {
+            text-align: end;
+          }
+        }
+      }
+
+      .arrow {
+        max-width: 300px;
+
+        & path {
+          stroke: var(--base-black);
+        }
       }
     }
+
+    &__bottom {
+      display: flex;
+      gap: 50px;
+
+      & p {
+        @include typography.h7;
+      }
+    }
+  }
+
+  .shadow {
+    position: absolute;
+    top: -150px;
+    left: 0;
+
+    opacity: .6;
   }
 }

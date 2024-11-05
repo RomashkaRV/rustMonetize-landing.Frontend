@@ -8,46 +8,46 @@ import { ImageGame, ImageGift, ImageShadow, ImageShop } from "./_assets";
 
 import style from "./index.module.scss";
 
-const cardShop = {
-  offscreen: {
-    x: 400
-  },
-  onscreen: {
-    x: 0,
-    transition: {
-      type: "spring",
-      duration: 2
-    }
-  }
-};
-
-const cardGame = {
-  offscreen: {
-    x: -400
-  },
-  onscreen: {
-    x: 0,
-    transition: {
-      type: "spring",
-      duration: 1.5
-    }
-  }
-};
-
-const imageGift = {
-  offscreen: {
-    y: -300
-  },
-  onscreen: {
-    y: 0,
-    transition: {
-      type: "spring",
-      duration: 2.2
-    }
-  }
-};
-
 export const MainLayer = () => {
+  const cardShop = {
+    offscreen: {
+      x: 400
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        duration: 2
+      }
+    }
+  };
+
+  const cardGame = {
+    offscreen: {
+      x: -400
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        duration: 1.5
+      }
+    }
+  };
+
+  const imageGift = {
+    offscreen: {
+      y: -300
+    },
+    onscreen: {
+      y: 0,
+      transition: {
+        type: "spring",
+        duration: 2.2
+      }
+    }
+  };
+
   return (
     <div className={style.layer}>
       <motion.p
