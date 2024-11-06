@@ -1,0 +1,48 @@
+@use "style/mixins/typography";
+
+.layer {
+  padding: 100px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 30px;
+
+  .head {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    .title {
+      max-width: 600px;
+
+      height: fit-content;
+
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+
+      text-align: start;
+
+      @include typography.h2;
+    }
+
+    .circleContainer {
+      width: 200px;
+      height: 200px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .textPath {
+        @include typography.h7;
+      }
+    }
+  }
+}

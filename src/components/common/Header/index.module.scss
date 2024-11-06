@@ -1,6 +1,8 @@
 @use "style/mixins/typography";
 
 .header {
+  width: 100%;
+
   padding: 20px;
 
   position: sticky;
@@ -12,9 +14,15 @@
 
   border-radius: 0 0 10px 10px;
 
-  z-index: 100;
+  transition: all .3s ease;
 
-  backdrop-filter: blur(20px);
+  z-index: 1000;
+
+  &.scrolled {
+    box-shadow: 0 21px 37px 0 rgba(34, 60, 80, 0.2);
+
+    background-color: #fff;
+  }
 
   &__navbar {
     display: flex;

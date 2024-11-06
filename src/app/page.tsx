@@ -4,6 +4,7 @@ import {
   CooperationLayer,
   Header,
   MainLayer,
+  StagesLayer,
   TaskLayer
 } from "components/common";
 
@@ -17,6 +18,8 @@ export default function MainPage() {
       <TaskLayer />
 
       <CooperationLayer />
+
+      <StagesLayer />
     </div>
   );
 }
