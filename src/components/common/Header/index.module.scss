@@ -1,7 +1,7 @@
 @use "style/mixins/typography";
 
 .header {
-  padding-top: 25px;
+  padding: 20px;
 
   position: sticky;
   top: 0;
@@ -10,9 +10,11 @@
   align-items: center;
   justify-content: space-between;
 
+  border-radius: 0 0 10px 10px;
+
   z-index: 100;
 
-  background-color: var(--sky-50);
+  backdrop-filter: blur(20px);
 
   &__navbar {
     display: flex;

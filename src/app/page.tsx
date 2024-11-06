@@ -1,6 +1,11 @@
 import React from "react";
 
-import { Header, MainLayer, TaskLayer } from "components/common";
+import {
+  CooperationLayer,
+  Header,
+  MainLayer,
+  TaskLayer
+} from "components/common";
 
 export default function MainPage() {
   return (
@@ -10,6 +15,8 @@ export default function MainPage() {
       <MainLayer />
 
       <TaskLayer />
+
+      <CooperationLayer />
     </div>
   );
 }
