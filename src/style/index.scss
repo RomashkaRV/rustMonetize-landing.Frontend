@@ -1,5 +1,4 @@
 @import "reset";
-@import "global";
 @import "font";
 @import "colors";
 
@@ -15,6 +14,18 @@ body {
   font-family: Golos, sans-serif;
 
   background-color: var(--sky-50);
+
+  &::-webkit-scrollbar {
+    width: 5px;
+
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+
+    background-color: var(--emerald-400);
+  }
 }
 
 a {

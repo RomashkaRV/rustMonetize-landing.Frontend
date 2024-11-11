@@ -1,5 +1,9 @@
 @use "style/mixins/typography";
 
+.layout {
+  overflow: hidden;
+}
+
 .layer {
   padding: 200px 0;
 
@@ -39,18 +43,20 @@
     height: 150px;
 
     position: absolute;
-    top: 60px;
+    top: 20px;
     right: 30%;
 
     transform: rotate(-12deg);
   }
 
-  .game {
+  .coinTop {
     position: absolute;
     left: 0;
     bottom: 100px;
 
     transform: rotate(-12deg);
+
+    z-index: 100;
   }
 
   .stroke {

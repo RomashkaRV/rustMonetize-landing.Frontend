@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { Button } from "components/core";
+import { Layout } from "components/core/Layout";
 
 import { NAV_MENU } from "./constants";
 
@@ -32,24 +33,26 @@ export const Header = () => {
   }, []);
 
   return (
-    <header
-      className={classNames(style.header, { [style.scrolled]: isScrolled })}
+    <Layout
+      className={classNames(style.layout, { [style.scrolled]: isScrolled })}
     >
-      <div className={style.header__navbar}>
-        <p className={style.logo}>
-          <span>g</span>Monetize
-        </p>
+      <header className={style.header}>
+        <div className={style.header__navbar}>
+          <p className={style.logo}>
+            <span>g</span>Monetize
+          </p>
 
-        <div className={style.links}>
-          {NAV_MENU.map((item, index) => (
-            <Link className={style.links__link} href={item.url} key={index}>
-              {item.title}
-            </Link>
-          ))}
+          <div className={style.links}>
+            {NAV_MENU.map((item, index) => (
+              <Link className={style.links__link} href={item.url} key={index}>
+                {item.title}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <Button>Связаться</Button>
-    </header>
+        <Button>Связаться</Button>
+      </header>
+    </Layout>
   );
 };

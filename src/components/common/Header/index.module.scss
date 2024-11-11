@@ -1,18 +1,8 @@
 @use "style/mixins/typography";
 
-.header {
-  width: 100%;
-
-  padding: 20px;
-
+.layout {
   position: sticky;
   top: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border-radius: 0 0 10px 10px;
 
   transition: all .3s ease;
 
@@ -23,6 +13,16 @@
 
     background-color: #fff;
   }
+}
+
+.header {
+  width: 100%;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   &__navbar {
     display: flex;
