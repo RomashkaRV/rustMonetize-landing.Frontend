@@ -1,16 +1,18 @@
 import React from "react";
 
+import {
+  Header,
+  MainLayer,
+  TaskLayer,
+  StagesLayer,
+  DesignLayer,
+  DifficultLayer,
+  CooperationLayer
+} from "components/common";
+
 import Head from "./head";
 
 import "style/index.scss";
-import {
-  CooperationLayer,
-  DifficultLayer,
-  Header,
-  MainLayer,
-  StagesLayer,
-  TaskLayer
-} from "components/common";
 
 export default function RootLayout() {
   return (
@@ -29,6 +31,8 @@ export default function RootLayout() {
         <StagesLayer />
 
         <DifficultLayer />
+
+        <DesignLayer />
 
         <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 
