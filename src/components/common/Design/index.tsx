@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { Layout } from "components/core";
@@ -5,6 +8,7 @@ import { Layout } from "components/core";
 import { ImageDesign, ImageShadow } from "./_assets";
 
 import style from "./index.module.scss";
+import { variantsTitle } from "./variants";
 
 export const DesignLayer = () => {
   const STEPS = [
@@ -16,11 +20,18 @@ export const DesignLayer = () => {
 
   return (
     <Layout className={style.layer}>
-      <div className={style.content}>
+      <motion.div
+        className={style.content}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.6 }}
+      >
         <div className={style.head}>
           <p className={style.title}>Как получить готовое</p>
 
-          <Image src={ImageDesign} alt="design" className={style.design} />
+          <motion.div className={style.design} variants={variantsTitle}>
+            <Image src={ImageDesign} alt="design" />
+          </motion.div>
 
           <Image src={ImageShadow} alt="shadow" className={style.shadow} />
         </div>
@@ -34,7 +45,7 @@ export const DesignLayer = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </Layout>
   );
 };

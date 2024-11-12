@@ -5,3 +5,4 @@ export { StagesLayer } from "./Stages";
 export { DifficultLayer } from "./Difficult";
 export { CooperationLayer } from "./Cooperation";
 export { DesignLayer } from "./Design";
+export { FeedbackLayer } from "./Feedback";

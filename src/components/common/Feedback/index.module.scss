@@ -1,0 +1,60 @@
+@use "style/mixins/typography";
+
+.layer {
+  padding: 100px 0;
+
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.general {
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .head {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    &__title {
+      @include typography.h2;
+
+    }
+
+    &__description {
+      @include typography.b3;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    &__button {
+      padding: 20px;
+
+      border-radius: 10px;
+    }
+
+    &__privacy {
+      @include typography.b3;
+
+      & span {
+        text-decoration: underline;
+
+        cursor: pointer;
+      }
+    }
+  }
+}

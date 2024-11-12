@@ -6,6 +6,7 @@ import {
   TaskLayer,
   StagesLayer,
   DesignLayer,
+  FeedbackLayer,
   DifficultLayer,
   CooperationLayer
 } from "components/common";
@@ -33,6 +34,8 @@ export default function RootLayout() {
         <DifficultLayer />
 
         <DesignLayer />
+
+        <FeedbackLayer />
 
         <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 
