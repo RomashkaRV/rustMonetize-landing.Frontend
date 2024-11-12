@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 
+import { Layout } from "components/core/Layout";
+
 import Tabs from "./components/Tabs";
 
 import { TABS } from "./constants";
-
-import { Layout } from "../../core/Layout";
 
 import style from "./index.module.scss";
 

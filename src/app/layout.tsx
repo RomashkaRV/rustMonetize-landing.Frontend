@@ -5,6 +5,7 @@ import Head from "./head";
 import "style/index.scss";
 import {
   CooperationLayer,
+  DifficultLayer,
   Header,
   MainLayer,
   StagesLayer,
@@ -26,6 +27,8 @@ export default function RootLayout() {
         <CooperationLayer />
 
         <StagesLayer />
+
+        <DifficultLayer />
 
         <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 
