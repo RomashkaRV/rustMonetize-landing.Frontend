@@ -13,7 +13,7 @@ import style from "./index.module.scss";
 export const MainLayer = () => {
   const moneyBag = {
     offscreen: {
-      x: innerWidth
+      x: typeof window !== "undefined" ? window.innerWidth : 0
     },
     onscreen: {
       x: 0,
@@ -26,7 +26,7 @@ export const MainLayer = () => {
 
   const coinLeft = {
     offscreen: {
-      x: -400
+      x: typeof window !== "undefined" ? -window.innerWidth : 0
     },
     onscreen: {
       x: 0,
@@ -39,7 +39,7 @@ export const MainLayer = () => {
 
   const coinTop = {
     offscreen: {
-      y: -300
+      y: typeof window !== "undefined" ? -window.innerHeight : 0
     },
     onscreen: {
       y: 0,

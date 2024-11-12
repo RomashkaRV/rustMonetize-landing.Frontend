@@ -5,7 +5,7 @@ export const NAV_MENU = [
   },
   {
     title: "Заявка",
-    url: "/"
+    url: "#feedback"
   },
   {
     title: "Примеры",

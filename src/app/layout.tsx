@@ -1,41 +1,17 @@
+import type { ReactNode } from "react";
 import React from "react";
-
-import {
-  Header,
-  MainLayer,
-  TaskLayer,
-  StagesLayer,
-  DesignLayer,
-  FeedbackLayer,
-  DifficultLayer,
-  CooperationLayer
-} from "components/common";
 
 import Head from "./head";
 
 import "style/index.scss";
 
-export default function RootLayout() {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <Head />
 
       <body>
-        <Header />
-
-        <MainLayer />
-
-        <TaskLayer />
-
-        <CooperationLayer />
-
-        <StagesLayer />
-
-        <DifficultLayer />
-
-        <DesignLayer />
-
-        <FeedbackLayer />
+        {children}
 
         <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 

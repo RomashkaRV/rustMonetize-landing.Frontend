@@ -1,7 +1,11 @@
 @use "style/mixins/typography";
 
 .layer {
+  width: 100%;
+
   padding: 100px 0;
+
+  position: relative;
 
   overflow: hidden;
 }
