@@ -11,7 +11,8 @@ import {
   FeedbackLayer,
   QuestionsLayer,
   DifficultLayer,
-  CooperationLayer
+  CooperationLayer,
+  HelpLayout
 } from "components/common";
 
 export default function MainPage() {
@@ -34,6 +35,8 @@ export default function MainPage() {
       <FeedbackLayer />
 
       <QuestionsLayer />
+
+      <HelpLayout />
     </div>
   );
 }

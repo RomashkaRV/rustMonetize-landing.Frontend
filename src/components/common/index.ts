@@ -1,6 +1,7 @@
 export { Header } from "./Header";
 export { MainLayer } from "./Main";
 export { TaskLayer } from "./Task";
+export { HelpLayout } from "./Help";
 export { StagesLayer } from "./Stages";
 export { DesignLayer } from "./Design";
 export { FeedbackLayer } from "./Feedback";
