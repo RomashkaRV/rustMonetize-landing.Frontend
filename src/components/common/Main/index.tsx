@@ -1,5 +1,3 @@
-"use client";
-
 import classNames from "classnames";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -13,7 +11,7 @@ import style from "./index.module.scss";
 export const MainLayer = () => {
   const moneyBag = {
     offscreen: {
-      x: typeof window !== "undefined" ? window.innerWidth : 0
+      x: 1920
     },
     onscreen: {
       x: 0,
@@ -26,7 +24,7 @@ export const MainLayer = () => {
 
   const coinLeft = {
     offscreen: {
-      x: typeof window !== "undefined" ? -window.innerWidth : 0
+      x: -1920
     },
     onscreen: {
       x: 0,
@@ -39,7 +37,7 @@ export const MainLayer = () => {
 
   const coinTop = {
     offscreen: {
-      y: typeof window !== "undefined" ? -window.innerHeight : 0
+      y: -1080
     },
     onscreen: {
       y: 0,

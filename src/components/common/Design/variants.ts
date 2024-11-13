@@ -1,6 +1,6 @@
 export const variantsTitle = {
   offscreen: {
-    x: typeof window !== "undefined" ? -window.innerWidth : 0
+    x: -1920
   },
   onscreen: {
     x: 0,

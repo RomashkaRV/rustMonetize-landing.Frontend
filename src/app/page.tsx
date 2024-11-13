@@ -3,15 +3,16 @@
 import React from "react";
 
 import {
-  CooperationLayer,
-  DesignLayer,
-  DifficultLayer,
-  FeedbackLayer,
   Header,
   MainLayer,
+  TaskLayer,
+  DesignLayer,
   StagesLayer,
-  TaskLayer
-} from "../components/common";
+  FeedbackLayer,
+  QuestionsLayer,
+  DifficultLayer,
+  CooperationLayer
+} from "components/common";
 
 export default function MainPage() {
   return (
@@ -31,6 +32,8 @@ export default function MainPage() {
       <DesignLayer />
 
       <FeedbackLayer />
+
+      <QuestionsLayer />
     </div>
   );
 }
