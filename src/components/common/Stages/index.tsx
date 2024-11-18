@@ -13,7 +13,7 @@ import style from "./index.module.scss";
 export const StagesLayer = () => {
   return (
     <Layout>
-      <div className={style.layer}>
+      <div className={style.layer} id="stages">
         <div className={style.head}>
           <p className={style.title}>Поэтапная программа запуска</p>
 

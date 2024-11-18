@@ -23,6 +23,7 @@ export const QuestionsLayer = () => {
     <Layout className={style.layer}>
       <motion.div
         className={style.content}
+        id="questions"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.7 }}

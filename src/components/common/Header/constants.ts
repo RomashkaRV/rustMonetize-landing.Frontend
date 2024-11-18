@@ -1,22 +1,18 @@
 export const NAV_MENU = [
   {
+    title: "Сотрудничество",
+    url: "#cooperation"
+  },
+  {
     title: "Программа",
-    url: "/"
+    url: "#stages"
+  },
+  {
+    title: "Вопросы",
+    url: "#questions"
   },
   {
     title: "Заявка",
     url: "#feedback"
-  },
-  {
-    title: "Примеры",
-    url: "/"
-  },
-  {
-    title: "Вопросы",
-    url: "/"
-  },
-  {
-    title: "Отзывы",
-    url: "/"
   }
 ];

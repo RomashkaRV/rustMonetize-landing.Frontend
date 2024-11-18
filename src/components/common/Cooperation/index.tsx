@@ -15,7 +15,7 @@ import { variantsLi, variantsTitle, variantsUl } from "./variants";
 export const CooperationLayer = () => {
   return (
     <Layout>
-      <div className={style.layer}>
+      <div className={style.layer} id="cooperation">
         <motion.div
           className={style.content}
           initial="offscreen"

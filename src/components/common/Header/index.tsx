@@ -38,9 +38,9 @@ export const Header = () => {
     >
       <header className={style.header}>
         <div className={style.header__navbar}>
-          <p className={style.logo}>
+          <Link href="/" className={style.logo}>
             <span>g</span>Monetize
-          </p>
+          </Link>
 
           <div className={style.links}>
             {NAV_MENU.map((item, index) => (
