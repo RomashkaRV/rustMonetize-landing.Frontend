@@ -1,0 +1,76 @@
+@use "style/mixins/typography";
+@use "style/mixins/actions";
+
+.layer {
+  padding: 100px 0;
+
+  background-color: var(--base-white);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title {
+  @include typography.h2;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+
+  .question {
+    height: fit-content;
+
+    padding: 30px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--base-black);
+
+    &:last-child {
+      border-bottom: 1px solid var(--base-black);
+    }
+
+    &__content {
+      height: fit-content;
+
+      transition: all .3s ease;
+    }
+
+    &__title {
+      @include typography.b1;
+    }
+
+    &__answer {
+      @include typography.b3;
+
+      padding-top: 20px;
+
+      display: none;
+
+      transition: all 3s ease;
+
+      &Open {
+        display: block;
+
+        transition: all 3s ease;
+      }
+    }
+  }
+
+  .open {
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+    @include actions.hover {
+      transform: rotate(-20deg);
+    };
+  }
+}

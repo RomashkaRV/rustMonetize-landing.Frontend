@@ -1,0 +1,71 @@
+@use "style/mixins/typography";
+
+.layout {
+  overflow: hidden;
+}
+
+.layer {
+  padding: 200px 0;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    max-width: 640px;
+
+    @include typography.h1;
+
+    text-align: center;
+
+    z-index: 10;
+
+    color: var(--base-black);
+  }
+
+  .shadow {
+    position: absolute;
+    top: 150px;
+  }
+
+  .shop {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    transform: rotate(12deg);
+  }
+
+  .gift {
+    max-width: 150px;
+    height: 150px;
+
+    position: absolute;
+    top: 20px;
+    right: 30%;
+
+    transform: rotate(-12deg);
+  }
+
+  .coinTop {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+
+    transform: rotate(-12deg);
+
+    z-index: 100;
+  }
+
+  .stroke {
+    position: absolute;
+    right: 90px;
+    bottom: 120px;
+
+    & path {
+      stroke: var(--emerald-400);
+    }
+  }
+}

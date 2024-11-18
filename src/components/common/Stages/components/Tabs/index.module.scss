@@ -1,0 +1,67 @@
+@use "style/mixins/typography";
+
+.tabs {
+  width: 100%;
+
+  display: flex;
+  gap: 30px;
+}
+
+.tabButtons {
+  width: 100%;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .tabButton {
+    @include typography.h5;
+
+    padding: 15px 5px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    border: none;
+
+    border-radius: 10px;
+
+    transition: all .3s ease;
+
+    background-color: var(--base-white);
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &.active {
+      background-color: var(--emerald-400);
+    }
+  }
+}
+
+.content {
+  width: 100%;
+
+  height: fit-content;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  background-color: var(--base-white);
+
+  .tab {
+    position: relative;
+
+    font-size: 1.2em;
+
+    text-align: justify;
+
+    overflow: hidden;
+
+    color: var(--base-black);
+  }
+}

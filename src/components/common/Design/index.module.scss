@@ -1,0 +1,108 @@
+@use "style/mixins/typography";
+
+.layer {
+  padding: 100px 0;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 150px;
+}
+
+.head {
+  .title {
+    max-width: 600px;
+
+    height: fit-content;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    text-align: start;
+
+    @include typography.h2;
+  }
+
+  .shadow {
+    position: absolute;
+    top: -350px;
+    left: -300px;
+  }
+
+  .design {
+    position: absolute;
+
+    top: 80px;
+    left: 380px;
+
+    z-index: 10;
+
+    & img {
+      transform: rotate(-3deg);
+    }
+  }
+}
+
+.steps {
+  width: 100%;
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  .step {
+    max-width: 360px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    z-index: 10;
+
+    &:nth-child(1) {
+      &::after {
+        width: 100%;
+        height: 2px;
+
+        position: absolute;
+        top: 22px;
+        left: 0;
+
+        content: "";
+
+        z-index: -1;
+
+        background-color: var(--base-black);
+      }
+    }
+
+    &__number {
+      width: 45px;
+      height: 45px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include typography.b3;
+
+      border-radius: 50%;
+
+      color: var(--base-white);
+      background-color: var(--base-black);
+    }
+
+    &__title {
+      @include typography.h5;
+    }
+  }
+}

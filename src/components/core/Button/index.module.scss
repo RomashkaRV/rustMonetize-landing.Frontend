@@ -1,0 +1,23 @@
+@use "style/mixins/actions";
+@use "style/mixins/typography";
+
+.button {
+  padding: 10px 20px;
+
+  @include typography.b3;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 2px;
+
+  transition: all .3s ease;
+
+  color: var(--base-white);
+
+  background-color: var(--zinc-800);
+
+  @include actions.hover {
+    opacity: .7;
+  }
+}

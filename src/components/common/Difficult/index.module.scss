@@ -1,0 +1,151 @@
+@use "style/mixins/typography";
+
+.layer {
+  background-color: #fff;
+}
+
+.content {
+  padding: 100px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 30px;
+
+  .title {
+    height: fit-content;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    text-align: center;
+
+    @include typography.h2;
+  }
+
+  .list {
+    width: 100%;
+
+    display: flex;
+    gap: 20px;
+
+    &.under {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+    }
+
+    .block {
+      width: 100%;
+
+      padding: 20px;
+
+      position: relative;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      border-radius: 10px;
+
+      background-color: var(--gray-100);
+
+      &.large {
+        justify-content: unset;
+        flex-direction: column;
+
+        gap: 30px;
+      }
+
+      &__title {
+        color: black;
+
+        @include typography.h6;
+      }
+
+      &__hiddenInfo {
+        max-width: 300px;
+
+        padding: 10px;
+
+        position: absolute;
+        right: -43px;
+        bottom: 70px;
+
+        display: none;
+
+        border-radius: 10px;
+
+        transition: all .3s ease;
+
+        z-index: 100;
+
+        @include typography.b3;
+
+        color: var(--base-white);
+        background-color: var(--zinc-700);
+
+        &::after {
+          position: absolute;
+          right: 72px;
+          bottom: -17px;
+
+          content: "";
+
+          border: 10px solid transparent;
+          border-top: 10px solid var(--zinc-700);
+        }
+      }
+
+      &__plus {
+        width: 40px;
+        height: 40px;
+
+        margin-top: auto;
+
+        padding: 10px;
+
+        cursor: pointer;
+
+        border-radius: 50%;
+
+        z-index: 100;
+
+        color: var(--base-white);
+        fill: currentcolor;
+
+        background-color: var(--emerald-400);
+
+         &:hover + .block__hiddenInfo {
+           display: block;
+         }
+      }
+
+      &__image {
+        padding: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+
+        &:not(:last-child) {
+          background-color: var(--base-white);
+        }
+      }
+
+      &__description {
+        @include typography.b2;
+
+        text-align: justify;
+
+        & span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
